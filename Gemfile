@@ -9,6 +9,11 @@ gem 'pg', '0.12.2'
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
 end
+
+group :development do
+  gem 'guard-rspec', '0.5.5'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -16,9 +21,15 @@ group :assets do
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
 end
+
 gem 'jquery-rails', '2.0.1'
+
 group :test do
   gem 'capybara', '1.1.2'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
+  # OS X 10.8 specific
+  gem 'terminal-notifier-guard', '1.5.3'
 end
 
 # To use ActiveModel has_secure_password
